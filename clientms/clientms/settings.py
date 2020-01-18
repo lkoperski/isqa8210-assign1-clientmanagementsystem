@@ -25,6 +25,10 @@ SECRET_KEY = 'r)njx%=1t*(!k@0byxeb+%hhg0=c3^^p#we30hi7zkd=pcwm*l'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+
+# Custom user model
+AUTH_USER_MODEL = 'users.CustomUser'
+
 ALLOWED_HOSTS = []
 
 
@@ -37,6 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'users',
+    'pages', #not really sure where this came from?
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -105,7 +112,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Chicago'
 
 USE_I18N = True
 
